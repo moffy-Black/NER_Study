@@ -1,0 +1,13 @@
+version: '3'
+services:
+    python3:
+        restart: always
+        build: .
+        container_name: 'ner_study'
+        working_dir: '/root/'
+        command: bash -c "chmod 777 /root/app/scripts/run.sh && /root/app/scripts/run.sh"
+        tty: true
+        volumes:
+            - ./app:/root/app
+        ports:
+            - "8501:8501"
