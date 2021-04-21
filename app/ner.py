@@ -7,7 +7,7 @@ df = pd.DataFrame(columns=['text','pos','tag','lemma'])
 nlp = Japanese()
 for w in nlp(text):
     series = pd.Series([w.text,w.pos_,w.tag_,w.lemma], index=df.columns)
-    df = df.append(series, ignore_index=True)
+    df = df.append(series,ignore_index=True) #ignore_index: 行にnameが指定されてなくとも無視
     # print('text:{}, pos:{}, tag:{} lemma:{}'.format(w.text,w.pos_,w.tag_,w.lemma))
 
-df.to_csv('紅蓮華.csv')
+df.to_csv('紅蓮華.csv', encoding='utf_8_sig') #encoding: excelで文字化けしない.
