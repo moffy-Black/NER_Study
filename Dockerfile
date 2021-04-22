@@ -15,3 +15,5 @@ RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 RUN pip install spacy-streamlit
 RUN pip install spacy[ja]
+RUN python -m spacy download ja_core_news_md
+RUN python -m spacy link ja_core_news_md ja
