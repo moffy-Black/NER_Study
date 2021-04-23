@@ -13,7 +13,9 @@ ENV TERM xterm
 RUN apt-get install -y vim less
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
-RUN pip install spacy-streamlit
-RUN pip install spacy[ja]
-RUN pip install gensim
-RUN python -m spacy download ja_core_news_md
+RUN pip install pymagnitude
+RUN pip install torch
+# RUN pip install spacy-streamlit
+# RUN pip install spacy[ja]
+# RUN pip install gensim
+# RUN python -m spacy download ja_core_news_md
